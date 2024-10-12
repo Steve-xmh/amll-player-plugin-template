@@ -1,11 +1,13 @@
+import { ExtensionContext } from "./context";
 import { SettingPage } from "./settings";
 
-pluginContext.registerSettingPage(SettingPage);
+extensionContext.registerComponent("settings", SettingPage);
+extensionContext.registerComponent("context", ExtensionContext);
 
-pluginContext.addEventListener("plugin-load", () => {
-    console.log("plugin loaded");
+extensionContext.addEventListener("extension-load", () => {
+    console.log("extension loaded");
 });
 
-pluginContext.addEventListener("plugin-unload", () => {
-    console.log("plugin loaded");
+extensionContext.addEventListener("extension-unload", () => {
+    console.log("extension unloaded");
 });
