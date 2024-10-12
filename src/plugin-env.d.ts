@@ -67,6 +67,8 @@ declare interface PluginContext extends EventTarget {
 	 * 常用的注入点有如下：
 	 * - `settings`: 插件独有设置的区域
 	 * - `context`: 应用的上下文区域，与各种上下文同级
+	 * 
+	 * 如需获悉更多注入点，可以在 AMLL Player 源代码中搜索 `ExtensionInjectPoint` 组件的引用。
 	 *
 	 * @param injectPointName 需要注入到的注入点名称
 	 * @param injectComponent 需要注入的 React 组件类
