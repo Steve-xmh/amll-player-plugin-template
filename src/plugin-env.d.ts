@@ -48,6 +48,10 @@ declare interface ExtensionContextEventMap {
  * 当前插件的上下文结构
  */
 declare interface PluginContext extends EventTarget {
+	/**
+	 * 扩展程序接口的版本号，会随着扩展接口更新而递增数字
+	 */
+	extensionApiNumber: number;
 	jotaiStore: ReturnType<typeof createStore>;
 	/**
 	 * 将插件的本地化字段数据注册到 AMLL Player 的国际化上下文中
